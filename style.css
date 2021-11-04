@@ -1,0 +1,150 @@
+/* Typography */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500&display=swap');
+
+/* Colors  */
+:root{
+    --moderate-violet: hsl(263, 55%, 52%);
+    --very-grayish-blue: hsl(217, 19%, 35%);
+    --very-blackish-blue: hsl(219, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
+    --light-gray: hsl(0, 0%, 81%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+body{
+    font-size: 13px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 600;
+    background-color: var(--light-grayish-blue);
+    color: var(--white);
+}
+
+main{   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 30px;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.card{
+    border-radius: 10px;
+}
+
+
+/* review heading */
+.reviewer{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    padding-left: 20px;
+    
+}
+
+.reviewer-name{
+    margin-left: 20px;
+}
+
+.reviewer-name h4{
+    margin-bottom: 0;
+    font-weight: 600;
+}
+
+.review-text{
+    padding: 0 40px 20px;
+}
+
+.graduate{
+    margin-top: 0;
+    font-weight: 500;
+    opacity: .7;
+}
+
+.attention-grabber{
+    color: var(--white);
+    font-weight: 500;
+}
+
+.grey-text{
+    color: var(--very-grayish-blue);
+}
+/* GRID STYLES */
+.one{
+    background-color: var(--moderate-violet);
+    grid-column: 1 / 3;
+    position: relative;
+    z-index: -20;
+}
+
+.quotation{
+    position: absolute;
+    top: 0;
+    left: 70%;
+    opacity: 0.6;
+    z-index: -10;
+}
+
+.two{
+    background-color: var(--very-grayish-blue);
+}
+
+.three{
+    background-color: var(--white);
+    grid-row: 2;
+}
+
+.four{
+    background-color: var(--very-blackish-blue);
+    grid-row: 2;
+    grid-column: 2 / 4;
+}
+
+.five{
+    background-color: var(--white);
+    grid-row: 1 / 3;
+}
+
+.comment{
+    font-weight: 500;
+    opacity: .7;
+}
+/* image styles */
+
+.image{
+    border-radius: 50%;
+    height: 2rem;
+}
+
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media only screen and (min-width: 375px) and (max-width: 800px){
+    .grid-container{
+        display: block;
+        margin: 0 auto;
+    }
+
+    .card{
+        width: 70%;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+    .quotation{
+        position: absolute;
+        top: 0;
+        left: 60%;
+        opacity: 0.6;
+        z-index: -10;
+    }
+}
